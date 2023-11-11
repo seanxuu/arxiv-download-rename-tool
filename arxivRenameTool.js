@@ -34,7 +34,12 @@
             console.log(papertitle)
             papertime = paperlist[paper].children[0].innerText.slice(6,10)
             downloadName = renamePaperFile(papertitle,papertime)
-            downloadPath = paperlist[paper].children[0].children[0].children[1].children[0].getAttribute("href")
+            try {
+                downloadPath = paperlist[paper].children[0].children[0].children[1].children[0].getAttribute("href");
+            } catch (error) {
+                downloadPath = paperlist[paper].children[0].children[0].children[0].href;
+                downloadPath = downloadPath.replace("abs", "pdf");
+            }
             addDownloadButton(downloadPath,downloadName,paperlist[paper].children[0])
         }
     }
