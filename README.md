@@ -5,6 +5,5 @@ A [tampermonkey](https://www.tampermonkey.net/) userscript redeveloped based on 
 
 
 ## Example
-
-<img width="858" alt="image" src="https://github.com/seanxuu/arxiv-download-rename-tool/assets/118865326/470fb956-178d-4b9f-9d64-3463d81b899a">
+<img width="880" alt="image" src="https://github.com/seanxuu/arxiv-download-rename-tool/assets/118865326/e925a3df-1afa-4413-8536-cf3bb232c702">
 
