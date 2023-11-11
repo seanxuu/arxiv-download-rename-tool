@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         arxiv-download-rename-tool
 // @namespace    Sean
-// @version      0.3
+// @version      0.4
 // @description  It can rename the pdf name when you download paper from arxiv.org
 // @author       Sean
 // @match        *://arxiv.org/abs/*
