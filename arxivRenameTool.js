@@ -1,14 +1,15 @@
 // ==UserScript==
-// @name         arXiv download rename tool
+// @name         arxiv-download-rename-tool
 // @namespace    Sean
-// @version      0.1
-// @description  Download arXiv paper and rename it automatically
+// @version      0.3
+// @description  It can rename the pdf name when you download paper from arxiv.org
 // @author       Sean
 // @match        *://arxiv.org/abs/*
 // @match        *://arxiv.org/search/*
 // @match        *://arxiv.org/list/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
+// @homepageURL  https://github.com/seanxuu/arxiv-download-rename-tool
 // @license      AGPL License
 // ==/UserScript==
 
@@ -33,8 +34,7 @@
             console.log(papertitle)
             papertime = paperlist[paper].children[0].innerText.slice(6,10)
             downloadName = renamePaperFile(papertitle,papertime)
-           // downloadPath = paperlist[paper].children[0].children[0].children[1].children[0].href+'.pdf'
-            downloadPath= "https://arxiv.org/pdf/"+paperlist[paper].children[0].children[0].children[1].getAttribute("paper_id")+".pdf"
+            downloadPath = paperlist[paper].children[0].children[0].children[1].children[0].getAttribute("href")
             addDownloadButton(downloadPath,downloadName,paperlist[paper].children[0])
         }
     }
@@ -58,7 +58,7 @@
     function addDownloadButton(downloadPath,downloadName,element){
         var button = document.createElement("a"); 
         button.id = "downloadPaper";
-        button.textContent = "Download paper with a new name";
+        button.textContent = "##Download paper with a new name##";
         button.setAttribute("href", downloadPath)
         button.setAttribute("download", downloadName)
         element.append(button);
