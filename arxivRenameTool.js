@@ -58,7 +58,7 @@
     function addDownloadButton(downloadPath,downloadName,element){
         var button = document.createElement("a"); 
         button.id = "downloadPaper";
-        button.textContent = "Download paper with new name";
+        button.textContent = "Download paper with a new name";
         button.setAttribute("href", downloadPath)
         button.setAttribute("download", downloadName)
         element.append(button);
