@@ -6,4 +6,5 @@ A [tampermonkey](https://www.tampermonkey.net/) userscript redeveloped based on 
 
 ## Example
 
-<img width="884" alt="image" src="https://github.com/seanxuu/arxiv-download-rename-tool/assets/118865326/7168889d-1101-4430-8619-b97350d0fd79">
+<img width="858" alt="image" src="https://github.com/seanxuu/arxiv-download-rename-tool/assets/118865326/470fb956-178d-4b9f-9d64-3463d81b899a">
+
