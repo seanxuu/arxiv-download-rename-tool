@@ -1,15 +1,16 @@
 // ==UserScript==
 // @name         arxiv-download-rename-tool
 // @namespace    Sean
-// @version      0.5
+// @version      0.6
 // @description  It can rename the pdf name when you download paper from arxiv.org
 // @author       Sean
 // @match        *://arxiv.org/abs/*
 // @match        *://arxiv.org/search/*
 // @match        *://arxiv.org/list/*
-// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @icon         https://static.arxiv.org/static/browse/0.3.4/images/icons/favicon-32x32.png
 // @grant        none
 // @homepageURL  https://github.com/seanxuu/arxiv-download-rename-tool
+// @homepage     https://greasyfork.org/en/scripts/479524-arxiv-download-rename-tool
 // @license      AGPL License
 // ==/UserScript==
 
