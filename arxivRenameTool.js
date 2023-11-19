@@ -1,16 +1,21 @@
 // ==UserScript==
 // @name         arxiv-download-rename-tool
-// @namespace    Sean
-// @version      0.6
-// @description  It can rename the pdf name when you download paper from arxiv.org
+// @name:zh-CN   	arxiv论文下载重命名工具
+// @name:zh-TW    	arxiv論文下載重命名工具
+// @name:en      	arxiv-download-rename-tool
+// @namespace   https://www.tampermonkey.net/
+// @version      0.7
+// @description  When you download a paper from arxiv.org, it can rename the pdf to the form [date + paper title]
+// @description:zh-CN   当您从arxiv.org下载论文时，它可以将pdf重命名为【日期+论文标题】的形式
+// @description:zh-tw   當您從arxiv.org下載論文時，它可以將pdf重命名為【日期+論文標題】的形式
+// @description:en  When you download a paper from arxiv.org, it can rename the pdf to the form [date + paper title]
 // @author       Sean
 // @match        *://arxiv.org/abs/*
 // @match        *://arxiv.org/search/*
 // @match        *://arxiv.org/list/*
 // @icon         https://static.arxiv.org/static/browse/0.3.4/images/icons/favicon-32x32.png
 // @grant        none
-// @homepageURL  https://github.com/seanxuu/arxiv-download-rename-tool
-// @homepage     https://greasyfork.org/en/scripts/479524-arxiv-download-rename-tool
+// @homepage     https://github.com/seanxuu/arxiv-download-rename-tool
 // @license      AGPL License
 // ==/UserScript==
 
