@@ -4,7 +4,7 @@
 // @name:zh-TW    	arxiv論文下載重命名工具
 // @name:en      	arxiv-download-rename-tool
 // @namespace   https://www.tampermonkey.net/
-// @version      0.7
+// @version      0.8
 // @description  When you download a paper from arxiv.org, it can rename the pdf to the form [date + paper title]
 // @description:zh-CN   当您从arxiv.org下载论文时，它可以将pdf重命名为【日期+论文标题】的形式
 // @description:zh-tw   當您從arxiv.org下載論文時，它可以將pdf重命名為【日期+論文標題】的形式
@@ -27,6 +27,11 @@
     downloadPath = "";
   var papertitle = "",
     papertime = "";
+  // add expanding all abs
+  var more = $("a:contains(More)");
+    for(var i = 0; i < more.length; i++) {
+        more[i].click();
+  }
   if (url.search("/abs/") != -1) {
     papertitle = document.querySelector("#abs > h1").innerText;
     downloadPath = window.location.href.replace("abs", "pdf") + ".pdf"; //document.querySelector("#abs-outer > div.extra-services > div.full-text > ul > li:nth-child(1) > a")+'.pdf'
