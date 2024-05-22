@@ -17,6 +17,8 @@
 // @grant        none
 // @homepage     https://github.com/seanxuu/arxiv-download-rename-tool
 // @license      AGPL License
+// @downloadURL https://update.greasyfork.org/scripts/479524/arxiv-download-rename-tool.user.js
+// @updateURL https://update.greasyfork.org/scripts/479524/arxiv-download-rename-tool.meta.js
 // ==/UserScript==
 
 (function () {
@@ -37,7 +39,7 @@
     downloadPath = window.location.href.replace("abs", "pdf") + ".pdf"; //document.querySelector("#abs-outer > div.extra-services > div.full-text > ul > li:nth-child(1) > a")+'.pdf'
     papertime = window.location.pathname.slice(5, 9); //document.querySelector("#abs > div.metatable > table > tbody > tr:nth-child(3) > td.tablecell.arxivid > span > a").innerText.slice(6,10)
     downloadName = renamePaperFile(papertitle, papertime);
-    addDownloadButton(
+    addDownloadButton2(
       downloadPath,
       downloadName,
       document.querySelector("#abs-outer > div.extra-services > div.full-text")
@@ -98,6 +100,21 @@
     button.setAttribute("download", downloadName);
     element.append(button);
   }
+function addDownloadButton2(downloadPath, downloadName, element) {
+    const x = new XMLHttpRequest();
+    x.open("GET", downloadPath, true);
+    x.responseType = 'blob';
+    x.onload = function (e) {
+        const url = window.URL.createObjectURL(x.response);
+        const a = document.createElement('a');
+        a.href = url;
+        a.target = '_blank';
+        a.download = downloadName;
+        a.textContent = "⏬Download paper with a new name⏬";
+        element.append(a);
+    };
+    x.send();
+}
   function renamePaperFile(name, time) {
     var downloadName = name.replace(": ", "：");
     downloadName = downloadName.replace(":", "：");
